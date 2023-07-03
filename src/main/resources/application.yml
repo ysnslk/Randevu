@@ -1,0 +1,28 @@
+# application.propoerties
+# server.port=9090
+# TODO: Dikkat , burada key-value çalışmalarında anahtar: bilgisinden sonra değer bir boşluk bırakılarak yazılmalıdır.
+# YML yanlış kullanımları
+# server:
+#   port: 9090 -- iki noktaya bitişik değer yazım yanlıştır.
+# server:
+# port: 9090 -- port değeri serverin alt başlığıdır. Bu nedenle aynı hizade değil bir tab boşluk ile yazılmalıdır.
+server:
+  port: 9090
+
+# spring.datasource.url
+# spring.datasource.username
+# spring.datasource.password
+# spring.datasource.driver-class-name
+
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/DBRANDEVU"
+    username: "postgres"
+    password: "123456789"
+    driver-class-name: "org.postgresql.Driver"
+
+  jpa:
+    hibernate:
+      ddl-auto: create # create-> her seferinde yeniden oluştur. create-drop-> uygulama kapatıldığında siler yeniden oluşturur.  #update-> tablodaki verileri korur.
+    show-sql: true
+
